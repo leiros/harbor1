@@ -1,13 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { LanguageProvider } from '@/contexts/LanguageContext';
+import Header from '@/components/Header';
+import HeroCarousel from '@/components/HeroCarousel';
+import PrinciplesSection from '@/components/PrinciplesSection';
+import PedagogySection from '@/components/PedagogySection';
+import CurriculumSection from '@/components/CurriculumSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import EvaluationSection from '@/components/EvaluationSection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <LanguageProvider>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          <HeroCarousel />
+          <PrinciplesSection />
+          <PedagogySection />
+          <CurriculumSection />
+          <ProjectsSection />
+          <EvaluationSection />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </LanguageProvider>
   );
 };
 
